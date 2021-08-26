@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/header.css">
+  
+  <title>Kahoot Answers - Get All Answers of a Kahoot Quiz</title>
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="footer"></div>
+
+  <script>
+    const header = document.querySelector('#header');
+    const footer = document.querySelector('#footer');
+    fetch('./common/header.html')
+      .then(r => r.text())
+      .then(d => header.innerHTML = d)
+      .catch(err => console.warn(err));
+      fetch('./common/footer.html')
+      .then(r => r.text())
+      .then(d => footer.innerHTML = d)
+      .catch(err => console.warn(err));
+  </script>
+</body>
+</html>
