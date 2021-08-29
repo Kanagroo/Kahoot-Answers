@@ -4,14 +4,12 @@ div.title-container {
   width: auto;
   margin: 75px 25px;
 
-  /* background-color: white; */
   color: var(--text-dark-on-light);
   text-align: center;
 }
 
 #questionsContainer {
   display: flex;
-  /* flex-direction: column; */
   gap: 1rem;
   align-items: center;
   justify-content: center;
