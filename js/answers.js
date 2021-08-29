@@ -124,11 +124,6 @@ getQuizData(quizId)
   quizTitleElem.textContent = card.title;
 
   for (let i=0;i<kahoot.questions.length;i++)
-    createDOMQuestion(kahoot.questions[i], i+1);
+    if (kahoot.questions[i].type == "quiz")
+      createDOMQuestion(kahoot.questions[i], i+1);
 });
-
-
-
-
-
-// if question is quiz: show; else: skip
