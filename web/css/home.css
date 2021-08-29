@@ -1,0 +1,106 @@
+
+div.search-container {
+  display: block;
+  height: auto;
+  width: auto;
+  margin: 75px 25px;
+
+  /* background-color: white; */
+  color: var(--text-dark-on-light);
+  text-align: center;
+}
+
+input.search-bar[type="text"] {
+  height: 35px;
+  width: 385px;
+  
+  /* border: 2px solid transparent; */
+  border: none;
+  border-bottom: 5px solid var(--palette-grey-light);
+  border-radius: 3px;
+  outline: none;
+
+  font-weight: var(--weight-bold);
+  color: var(--text-dark-on-light);
+  font-size: large;
+
+  padding: 0 15px;
+
+  box-shadow: 0 0 7px -4px var(--palette-grey-light);
+
+  transition: 150ms border-bottom-color ease-out;
+}
+input.search-bar[type="text"]:focus {
+  border-bottom-color: var(--palette-purple-lighter);
+}
+
+
+/* Cards */
+
+#cardsContainer {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+
+div.QuizCard {
+  display: block;
+  width: 350px;
+  height: 350px;
+
+  background-color: white;
+  border-radius: .25rem;
+
+  cursor: pointer;
+
+  box-shadow: 0 0 10px -5px var(--palette-grey-light);
+
+  transition: 175ms transform ease-out;
+}div.QuizCard:hover {
+  transform: scale(1.01);
+}
+
+div.QuizCard div.QuizCard-image {
+  width: 100%;
+  height: 70%;
+
+  border-radius: .25rem .25rem 0 0;
+}
+
+div.QuizCard div.QuizCard-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 30%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+
+  vertical-align: top;
+
+  color: var(--text-dark-on-light);
+
+}
+
+div.QuizCard h1.QuizCard-info-title {
+  font-size: large;
+  font-weight: var(--weight-bold);
+  overflow-x: hidden;
+}
+
+div.QuizCard div.QuizCard-info-title-container {
+  max-height: 70%;
+  overflow-y: hidden;
+}
+
+div.QuizCard p.QuizCard-info-desc {
+  font-size:small;
+  font-weight: var(--weight-regular);
+  margin-top: 0;
+  overflow-x: hidden;
+}
+

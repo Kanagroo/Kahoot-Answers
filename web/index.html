@@ -5,26 +5,61 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/home.css">
   
   <title>Kahoot Answers - Get All Answers of a Kahoot Quiz</title>
 </head>
 <body>
-  <div id="header"></div>
+<div class="wrapper">
+  <header id="header">
+    <nav>
+      <div class="header-title"><a href="./index.html">Kahoot!Answers</a></div>
+      <ul>
+        <li><a href="./index.html">About</a></li>
+        <li><a href="./index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div id="footer"></div>
+  <div id="main">
+    <div class="search-container">
+      <h1>Search your Quiz</h1>
+      <div class="search-bar-container">
+        <input type="text" id="searchinput" name="searchinput" class="search-bar" autocomplete="off">
+      </div>
+    </div>
+    <div id="cardsContainer">
+      <!-- <div class="QuizCard">
+        <div class="QuizCard-image" src="https://media.kahoot.it/ff7acedf-cadc-4be7-be7f-95d97f00454e"></div>
+        <div class="QuizCard-info">
+          <div class="QuizCard-info-title-container"><h1 class="QuizCard-info-title">Geometry Area of Polygons (MATH)</h1></div>
+          <div class="QuizCard-info-desc-container"><p class="QuizCard-info-desc">Math_by_Kahoot • 12 questions</p></div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>
 
-  <script>
-    const header = document.querySelector('#header');
-    const footer = document.querySelector('#footer');
-    fetch('./common/header.html')
-      .then(r => r.text())
-      .then(d => header.innerHTML = d)
-      .catch(err => console.warn(err));
-      fetch('./common/footer.html')
-      .then(r => r.text())
-      .then(d => footer.innerHTML = d)
-      .catch(err => console.warn(err));
-  </script>
+  
+  <footer id="footer">
+    <p>© 2021 Kanagroo</p>
+    <p>Powered by <a href="https://kahoot.com" target="_blank">Kahoot!</a></p>
+  </footer>
+
+  <script src="./js/quizlist.js" type="text/javascript"></script>
+  
 </body>
+
+<template id="cardTemplate">
+  
+  <div class="QuizCard">
+    <a>
+      <div class="QuizCard-image"></div>
+      <div class="QuizCard-info">
+        <div class="QuizCard-info-title-container"><h1 class="QuizCard-info-title"></h1></div>
+        <div class="QuizCard-info-desc-container"><p class="QuizCard-info-desc"></p></div>
+      </div>
+    </a>
+  </div>
+</template>
 </html>
