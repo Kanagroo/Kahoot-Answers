@@ -124,7 +124,7 @@ getQuizData(quizId)
   quizTitleElem.textContent = card.title;
 
   for (let i=0;i<kahoot.questions.length;i++)
-    createDOMQuestion(kahoot.questions[i], i);
+    createDOMQuestion(kahoot.questions[i], i+1);
 });
 
 
