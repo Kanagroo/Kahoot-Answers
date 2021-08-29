@@ -34,7 +34,7 @@ function createDOMCard(card) {
 async function getData(url) {
   var data;
 
-  let proxy = 'https://cors-anywhere.herokuapp.com/';
+  let proxy = 'https://kahootansproxy.herokuapp.com/';
 
   data = await fetch(proxy + url, {
     headers: {
